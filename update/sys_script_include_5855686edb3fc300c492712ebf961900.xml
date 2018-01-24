@@ -13,26 +13,63 @@
 	gr.query('sys_id', uniqueSysId);
 	gr.next();
 	var objIn = JSON.parse(gr.apiresponse);
-	gs.addInfoMessage(gr.apiresponse);
-	gs.addInfoMessage(objIn.records.length);
-	
 	for (var i = 0 ; i < objIn.records.length ; i++){
-		gs.addInfoMessage(objIn.records[i].team);
 		var team = new GlideRecord('x_87436_laliga_laliga_teams');
-		team.query('name',objIn.records[i].team);
+		team.addQuery('name',objIn.records[i].team);
+		team.query();
+		var teamRowCount = team.getRowCount();
+		if(teamRowCount === 1){
+			gs.addInfoMessage("1");
+			while(team.next()){
+			gs.addInfoMessage("2");
+			var scoreUpdate = new GlideRecord('x_87436_laliga_laliga_league_table');
+			scoreUpdate.addQuery('team_name', team.getValue('name'));
+			scoreUpdate.query();
+			gs.addInfoMessage(scoreUpdate.getEncodedQuery());
+			gs.addInfoMessage(scoreUpdate.getRowCount());
+			scoreUpdate.next();
+			if(scoreUpdate.getRowCount() == 1) {
+				gs.info(scoreUpdate.team_name + ' exists');
+				scoreUpdate.matches_played = objIn.records[i].played;
+				scoreUpdate.wins = objIn.records[i].win;
+				scoreUpdate.loss = objIn.records[i].loss;
+				scoreUpdate.draws = objIn.records[i].draw;
+				scoreUpdate.goals_against = objIn.records[i].goalsAgainst;
+				scoreUpdate.goals_for = objIn.records[i].goalsFor;
+				scoreUpdate.points = objIn.records[i].points;
+				scoreUpdate.update();
+			}
+		}}
+		else if (teamRowCount === 0){
+			var teamCreate = new GlideRecord('x_87436_laliga_laliga_teams');
+			teamCreate.newRecord();
+			teamCreate.name = objIn.records[i].team;
+			teamCreate.insert();
+			var teamCreatedSysId = teamCreate.sysid;
+			var scoreCreate = new GlideRecord('x_87436_laliga_laliga_league_table');
+			scoreCreate.team_name = objIn.records[i].team;
+			scoreCreate.matches_played = objIn.records[i].played;
+			scoreCreate.wins = objIn.records[i].win;
+			scoreCreate.loss = objIn.records[i].loss;
+			scoreCreate.draws = objIn.records[i].draw;
+			scoreCreate.goals_against = objIn.records[i].goalsAgainst;
+			scoreCreate.goals_for = objIn.records[i].goalsFor;
+			//scoreCreate.points = objIn.records[i].points;
+			scoreCreate.insert();
+		}
 	}
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-01-24 09:17:40</sys_created_on>
         <sys_id>5855686edb3fc300c492712ebf961900</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>processLeagueStanding</sys_name>
         <sys_package display_value="LaLiga" source="x_87436_laliga">9f19fb6bdb130300c492712ebf9619f0</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="LaLiga">9f19fb6bdb130300c492712ebf9619f0</sys_scope>
         <sys_update_name>sys_script_include_5855686edb3fc300c492712ebf961900</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-24 12:07:53</sys_updated_on>
+        <sys_updated_on>2018-01-24 19:12:14</sys_updated_on>
     </sys_script_include>
 </record_update>

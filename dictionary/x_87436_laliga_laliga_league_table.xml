@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="LaLiga League Table" max_length="40" name="x_87436_laliga_laliga_league_table" type="collection"/>
+    <element label="LaLiga League Table" max_length="40" name="x_87436_laliga_laliga_league_table" type="collection">
+        <element label="Draws" max_length="40" name="draws" type="integer"/>
+        <element label="Goals Against" max_length="40" name="goals_against" type="integer"/>
+        <element label="Goals For" max_length="40" name="goals_for" type="integer"/>
+        <element label="Loss" max_length="40" name="loss" type="integer"/>
+        <element label="Matches Played" max_length="100" name="matches_played" type="integer"/>
+        <element label="Points" max_length="40" name="points" type="integer"/>
+        <element label="Team Name" mandatory="true" max_length="32" name="team_name" reference="x_87436_laliga_laliga_teams" type="reference"/>
+        <element label="Wins" max_length="1000" name="wins" type="integer"/>
+        <index name="index">
+            <element name="team_name"/>
+        </index>
+    </element>
 </database>
