@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="" label="DailyAPITransactions" language="en" table="x_87436_laliga_dailyapitransactions">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>DailyAPITransactions</label>
+            <language>en</language>
+            <name>x_87436_laliga_dailyapitransactions</name>
+            <plural>DailyAPITransactions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-01-24 08:23:02</sys_created_on>
+            <sys_id>a7e850eedbfbc300c492712ebf96192c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>DailyAPITransactions</sys_name>
+            <sys_package display_value="LaLiga" source="x_87436_laliga">9f19fb6bdb130300c492712ebf9619f0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="LaLiga">9f19fb6bdb130300c492712ebf9619f0</sys_scope>
+            <sys_update_name>sys_documentation_x_87436_laliga_dailyapitransactions__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-01-24 08:23:02</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
