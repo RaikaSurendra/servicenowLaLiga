@@ -18,21 +18,21 @@
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Application File" name="sys_metadata">e7413232791203006517636e4f534962</super_class>
+        <super_class/>
         <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-01-24 08:08:10</sys_created_on>
-        <sys_id>8c84902adbfbc300c492712ebf9619f3</sys_id>
+        <sys_created_on>2018-01-24 11:15:49</sys_created_on>
+        <sys_id>107041aadbbfc300c492712ebf96199b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>LaLiga Teams</sys_name>
         <sys_package display_value="LaLiga" source="x_87436_laliga">9f19fb6bdb130300c492712ebf9619f0</sys_package>
         <sys_policy/>
         <sys_scope display_value="LaLiga">9f19fb6bdb130300c492712ebf9619f0</sys_scope>
-        <sys_update_name>sys_db_object_8c84902adbfbc300c492712ebf9619f3</sys_update_name>
+        <sys_update_name>sys_db_object_107041aadbbfc300c492712ebf96199b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-24 08:08:10</sys_updated_on>
+        <sys_updated_on>2018-01-24 11:15:49</sys_updated_on>
         <update_access>false</update_access>
         <user_role display_value="x_87436_laliga.laliga_teams_user" name="x_87436_laliga.laliga_teams_user">b58514eadbfbc300c492712ebf96197a</user_role>
         <ws_access>true</ws_access>

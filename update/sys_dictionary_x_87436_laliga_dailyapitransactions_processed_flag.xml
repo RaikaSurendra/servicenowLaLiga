@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_87436_laliga_laliga_teams">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="processed_flag" table="x_87436_laliga_dailyapitransactions">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -15,10 +15,10 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label/>
+        <column_label>Processed Flag</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>false</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -28,15 +28,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element/>
+        <element>processed_flag</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Collection">collection</internal_type>
+        <internal_type display_value="">boolean</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_87436_laliga_laliga_teams</name>
+        <name>x_87436_laliga_dailyapitransactions</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -53,16 +53,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-01-24 11:15:50</sys_created_on>
-        <sys_id>f67081aadbbfc300c492712ebf961924</sys_id>
+        <sys_created_on>2018-01-24 08:31:49</sys_created_on>
+        <sys_id>9bba5422db3fc300c492712ebf96196b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_87436_laliga_laliga_teams</sys_name>
+        <sys_name>Processed Flag</sys_name>
         <sys_package display_value="LaLiga" source="x_87436_laliga">9f19fb6bdb130300c492712ebf9619f0</sys_package>
         <sys_policy/>
         <sys_scope display_value="LaLiga">9f19fb6bdb130300c492712ebf9619f0</sys_scope>
-        <sys_update_name>sys_dictionary_x_87436_laliga_laliga_teams_null</sys_update_name>
+        <sys_update_name>sys_dictionary_x_87436_laliga_dailyapitransactions_processed_flag</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-24 11:15:50</sys_updated_on>
+        <sys_updated_on>2018-01-24 08:31:49</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

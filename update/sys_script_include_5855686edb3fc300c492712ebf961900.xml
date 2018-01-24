@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_87436_laliga.processLeagueStanding</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>processLeagueStanding</name>
+        <script><![CDATA[var processLeagueStanding = function(uniqueSysId) {
+	var gr = new GlideRecord('x_87436_laliga_dailyapitransactions');
+	gr.query('sys_id', uniqueSysId);
+	gr.next();
+	var objIn = JSON.parse(gr.apiresponse);
+	gs.addInfoMessage(gr.apiresponse);
+	gs.addInfoMessage(objIn.records.length);
+	
+	for (var i = 0 ; i < objIn.records.length ; i++){
+		gs.addInfoMessage(objIn.records[i].team);
+		var team = new GlideRecord('x_87436_laliga_laliga_teams');
+		team.query('name',objIn.records[i].team);
+	}
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-24 09:17:40</sys_created_on>
+        <sys_id>5855686edb3fc300c492712ebf961900</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>processLeagueStanding</sys_name>
+        <sys_package display_value="LaLiga" source="x_87436_laliga">9f19fb6bdb130300c492712ebf9619f0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LaLiga">9f19fb6bdb130300c492712ebf9619f0</sys_scope>
+        <sys_update_name>sys_script_include_5855686edb3fc300c492712ebf961900</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-24 12:07:53</sys_updated_on>
+    </sys_script_include>
+</record_update>

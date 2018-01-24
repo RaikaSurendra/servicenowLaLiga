@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="DailyAPITransactions" max_length="40" name="x_87436_laliga_dailyapitransactions" type="collection"/>
+    <element label="DailyAPITransactions" max_length="40" name="x_87436_laliga_dailyapitransactions" type="collection">
+        <element label="ApiResponse" max_length="20000" name="apiresponse" type="string"/>
+        <element label="API Name" max_length="400" name="api_name" type="string"/>
+        <element label="Processed Flag" max_length="40" name="processed_flag" type="boolean"/>
+    </element>
 </database>
